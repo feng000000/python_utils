@@ -1,0 +1,24 @@
+
+name = "Tom"
+age = 25
+height = 1.75
+employed = true
+dob = 2024-08-06T07:32:00Z
+dob_utc8 = 2024-08-06T07:32:00+08:00
+
+
+[table_name]
+table_field1 = "value!"
+table_field2 = [213, 2143, 435]
+
+[table_name.table_field3]
+key1 = "value1"
+key2 = "value2"
+
+
+[[table_name.dict_on_list]]
+key3 = "value3"
+key4 = "value4"
+[[table_name.dict_on_list]]
+key5 = "value5"
+key6 = "value6"
