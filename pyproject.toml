@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "python-utils"
+version = "0.1.0"
+description = ""
+authors = ["feng <flfeng000@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+sqlalchemy = "^2.0.32"
+pydantic-settings = "^2.4.0"
+sqlmodel = "^0.0.21"
+pytz = "^2024.1"
+psycopg2-binary = "^2.9.9"
+
+
+[tool.poetry.group.dev.dependencies]
+alembic = "^1.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

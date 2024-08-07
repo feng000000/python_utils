@@ -13,6 +13,29 @@ class LogSettings(_BasicSettings):
     LOG_FILE_PATH: str = Field(...)
 
 
+class DatabaseSettings(_BasicSettings):
+    DB_HOST: str = Field(...)
+    DB_PORT: str = Field(...)
+    DB_USERNAME: str = Field(...)
+    DB_PASSWORD: str = Field(...)
+    DB_DATABASE: str = Field(...)
+
+    @property
+    def DATABASE_URL(self) -> str:
+        print(
+            "postgresql://"
+            f"{self.DB_USERNAME}:{self.DB_PASSWORD}"
+            f"@{self.DB_HOST}:{self.DB_PORT}"
+            f"/{self.DB_DATABASE}"
+        )
+        return (
+            "postgresql://"
+            f"{self.DB_USERNAME}:{self.DB_PASSWORD}"
+            f"@{self.DB_HOST}:{self.DB_PORT}"
+            f"/{self.DB_DATABASE}"
+        )
+
+
 class SomeSettings(_BasicSettings):
     LIST_SEPARATED_BY_COMMAS: str = Field(...)
 
@@ -33,6 +56,7 @@ class SomeSettings(_BasicSettings):
 class Settings(
     LogSettings,
     SomeSettings,
+    DatabaseSettings,
 ): ...
 
 

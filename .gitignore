@@ -4,3 +4,6 @@
 **/.*
 !.env
 !.gitignore
+
+alembic/versions/*
+!alembic/versions/.gitkeep
